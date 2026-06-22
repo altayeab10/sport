@@ -60,3 +60,10 @@ CREATE TABLE Match_Results (
     score_team2 NUMBER,
     winner_team_id NUMBER REFERENCES Teams(team_id)
 );
+-- جدول الجوائز . 9 --
+CREATE TABLE Awards (
+    award_id NUMBER PRIMARY KEY,
+    award_name VARCHAR2(100) NOT NULL,
+    description VARCHAR2(255),
+    tournament_id NUMBER REFERENCES Tournaments(tournament_id)
+);
